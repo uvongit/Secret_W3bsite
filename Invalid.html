@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('failed-login-background-1.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .failed-container {
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #d9534f;
+        }
+
+        p {
+            color: #333;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backgroundImages = ['./img/y.png', './img/x.png', './img/z.png'];
+
+            function setRandomBackground() {
+                var randomIndex = Math.floor(Math.random() * backgroundImages.length);
+                document.body.style.backgroundImage = 'url(' + backgroundImages[randomIndex] + ')';
+            }
+
+            setRandomBackground();
+        });
+    </script>
+    <title>Failed Login</title>
+</head>
+<body>
+    <div class="failed-container">
+        <h1>Login Failed!</h1>
+        <p>Incorrect username or password.</p>
+        <p>Please RELOAD.</p>
+        <a href="index.html" class="btn btn-primary btn-block mt-3">Go back to login</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
